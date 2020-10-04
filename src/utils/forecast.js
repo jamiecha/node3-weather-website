@@ -11,7 +11,8 @@ const forecast = (latitude, longitude, callback) => {
             callback(undefined, 'Unable to find location')
         } else {
             const curr = response.body.current
-            const s = `It is ${curr.temperature} degrees out and it feels like ${curr.feelslike} degrees`
+            console.log(curr)
+            const s = `It is ${curr.temperature} degrees out and it feels like ${curr.feelslike} degrees. wind speed is ${curr.wind_speed}`
             callback(undefined, s)
         }
     })
